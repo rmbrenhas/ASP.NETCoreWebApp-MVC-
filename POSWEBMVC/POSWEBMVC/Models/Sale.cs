@@ -17,9 +17,7 @@ namespace POSWEBMVC.Models
         [Required]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime DateCreated { get; set; }
-
-
-        public User User { get; set; }
+        public CookieUser User { get; set; }
         public Store Store { get; set; }
         public Customer Customer { get; set; }
         public ICollection<SaleDetail> SaleDetails { get; set; }

@@ -19,7 +19,7 @@ namespace POSWEBMVC.Data
         public DbSet<Sale> Sales { get; set; }
         public DbSet<SaleDetail> SaleDetails { get; set; }
         public DbSet<Store> Stores { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<CookieUser> Users { get; set; }
         public DbSet<Brand> Brands { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -30,7 +30,7 @@ namespace POSWEBMVC.Data
             modelBuilder.Entity<Sale>().ToTable("Sale");
             modelBuilder.Entity<SaleDetail>().ToTable("SaleDetail");
             modelBuilder.Entity<Store>().ToTable("Store");
-            modelBuilder.Entity<User>().ToTable("User");
+            modelBuilder.Entity<CookieUser>().ToTable("User");
             modelBuilder.Entity<Brand>().ToTable("Brand");
         }
 

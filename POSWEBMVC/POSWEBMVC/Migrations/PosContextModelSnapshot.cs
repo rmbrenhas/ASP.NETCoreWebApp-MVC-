@@ -53,6 +53,35 @@ namespace POSWEBMVC.Migrations
                     b.ToTable("Category");
                 });
 
+            modelBuilder.Entity("POSWEBMVC.Models.CookieUser", b =>
+                {
+                    b.Property<Guid>("UserID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EmailAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Salt")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserID");
+
+                    b.ToTable("User");
+                });
+
             modelBuilder.Entity("POSWEBMVC.Models.Customer", b =>
                 {
                     b.Property<int>("CustomerID")
@@ -147,13 +176,16 @@ namespace POSWEBMVC.Migrations
                     b.Property<int>("UserID")
                         .HasColumnType("int");
 
+                    b.Property<Guid>("UserID1")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("SaleID");
 
                     b.HasIndex("CustomerID");
 
                     b.HasIndex("StoreID");
 
-                    b.HasIndex("UserID");
+                    b.HasIndex("UserID1");
 
                     b.ToTable("Sale");
                 });
@@ -214,36 +246,6 @@ namespace POSWEBMVC.Migrations
                     b.ToTable("Store");
                 });
 
-            modelBuilder.Entity("POSWEBMVC.Models.User", b =>
-                {
-                    b.Property<int>("UserID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(35)")
-                        .HasMaxLength(35);
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(55)")
-                        .HasMaxLength(55);
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("UserID");
-
-                    b.ToTable("User");
-                });
-
             modelBuilder.Entity("POSWEBMVC.Models.Product", b =>
                 {
                     b.HasOne("POSWEBMVC.Models.Brand", "Brand")
@@ -273,9 +275,9 @@ namespace POSWEBMVC.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("POSWEBMVC.Models.User", "User")
+                    b.HasOne("POSWEBMVC.Models.CookieUser", "User")
                         .WithMany()
-                        .HasForeignKey("UserID")
+                        .HasForeignKey("UserID1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

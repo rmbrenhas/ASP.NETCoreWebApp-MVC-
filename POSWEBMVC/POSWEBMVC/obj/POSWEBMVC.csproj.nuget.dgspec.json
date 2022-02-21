@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rmarinho\\Desktop\\RICARDO BRENHAS\\FULL STACK DEVELOPER\\PROJETO PRÁTICO\\POSWEBMVC\\09_02_22\\POSWEBMVC\\POSWEBMVC\\POSWEBMVC.csproj": {}
+    "C:\\Users\\rmarinho\\Desktop\\RICARDO BRENHAS\\FULL STACK DEVELOPER\\PROJETO PRÁTICO\\POSWEBMVC\\21_02_22_3\\POSWEBMVC\\POSWEBMVC\\POSWEBMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rmarinho\\Desktop\\RICARDO BRENHAS\\FULL STACK DEVELOPER\\PROJETO PRÁTICO\\POSWEBMVC\\09_02_22\\POSWEBMVC\\POSWEBMVC\\POSWEBMVC.csproj": {
+    "C:\\Users\\rmarinho\\Desktop\\RICARDO BRENHAS\\FULL STACK DEVELOPER\\PROJETO PRÁTICO\\POSWEBMVC\\21_02_22_3\\POSWEBMVC\\POSWEBMVC\\POSWEBMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rmarinho\\Desktop\\RICARDO BRENHAS\\FULL STACK DEVELOPER\\PROJETO PRÁTICO\\POSWEBMVC\\09_02_22\\POSWEBMVC\\POSWEBMVC\\POSWEBMVC.csproj",
+        "projectUniqueName": "C:\\Users\\rmarinho\\Desktop\\RICARDO BRENHAS\\FULL STACK DEVELOPER\\PROJETO PRÁTICO\\POSWEBMVC\\21_02_22_3\\POSWEBMVC\\POSWEBMVC\\POSWEBMVC.csproj",
         "projectName": "POSWEBMVC",
-        "projectPath": "C:\\Users\\rmarinho\\Desktop\\RICARDO BRENHAS\\FULL STACK DEVELOPER\\PROJETO PRÁTICO\\POSWEBMVC\\09_02_22\\POSWEBMVC\\POSWEBMVC\\POSWEBMVC.csproj",
+        "projectPath": "C:\\Users\\rmarinho\\Desktop\\RICARDO BRENHAS\\FULL STACK DEVELOPER\\PROJETO PRÁTICO\\POSWEBMVC\\21_02_22_3\\POSWEBMVC\\POSWEBMVC\\POSWEBMVC.csproj",
         "packagesPath": "C:\\Users\\rmarinho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rmarinho\\Desktop\\RICARDO BRENHAS\\FULL STACK DEVELOPER\\PROJETO PRÁTICO\\POSWEBMVC\\09_02_22\\POSWEBMVC\\POSWEBMVC\\obj\\",
+        "outputPath": "C:\\Users\\rmarinho\\Desktop\\RICARDO BRENHAS\\FULL STACK DEVELOPER\\PROJETO PRÁTICO\\POSWEBMVC\\21_02_22_3\\POSWEBMVC\\POSWEBMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rmarinho\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -77,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

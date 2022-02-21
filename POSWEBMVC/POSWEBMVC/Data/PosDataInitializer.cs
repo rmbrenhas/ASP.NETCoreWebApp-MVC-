@@ -13,7 +13,7 @@ namespace POSWEBMVC.Data
             if (!dbContext.Stores.Any())
             {
                 dbContext.Stores.Add(new Store { Name = "MyStoreOne", Adress = "2350 Main Street, 101", DateCreated = DateTime.Parse("2022-01-25") });
-                dbContext.Users.Add(new User { FirstName = "Ricardo", LastName = "Brenhas", UserName = "rmb", Password = "Rmb_123" });
+                //dbContext.Users.Add(new CookieUser { FirstName = "Ricardo", LastName = "Brenhas", UserName = "rmb", Password = "Rmb_123" });
                 dbContext.Brands.Add(new Brand { BrandName = "BrandNumberOne" });
                 dbContext.Customers.Add(new Customer { Name = "David", Adress = "4050 Avenue, 231", City = "Enfis", DateCreated = DateTime.Parse("2022-01-25"), Email = "david@mail.com", NIF = "123456789" });
 
