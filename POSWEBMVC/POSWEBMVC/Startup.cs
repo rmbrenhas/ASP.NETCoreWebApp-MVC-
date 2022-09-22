@@ -53,11 +53,14 @@ namespace POSWEBMVC
                 options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 options.DefaultSignOutScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             }).AddCookie(
-    CookieAuthenticationDefaults.AuthenticationScheme, (options) =>
-    {
-        options.LoginPath = "/Account/Login";
-        options.LogoutPath = "/Account/Logout";
-    });
+                CookieAuthenticationDefaults.AuthenticationScheme, (options) =>
+                {
+                    options.LoginPath = "/Account/Login";
+                    options.LogoutPath = "/Account/Logout";
+                });
+
+            services.ConfigureApplicationCookie(options => { options.LoginPath = "/Account/Login"; });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

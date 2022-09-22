@@ -10,7 +10,7 @@ using POSWEBMVC.Data;
 namespace POSWEBMVC.Migrations
 {
     [DbContext(typeof(PosContext))]
-    [Migration("20220214182804_V1")]
+    [Migration("20220920002143_V1")]
     partial class V1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,9 +46,7 @@ namespace POSWEBMVC.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CategoryID");
 
@@ -140,9 +138,7 @@ namespace POSWEBMVC.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(100)")
-                        .HasMaxLength(100);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");
@@ -257,7 +253,7 @@ namespace POSWEBMVC.Migrations
                         .IsRequired();
 
                     b.HasOne("POSWEBMVC.Models.Category", "Category")
-                        .WithMany()
+                        .WithMany("Products")
                         .HasForeignKey("CategoryID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

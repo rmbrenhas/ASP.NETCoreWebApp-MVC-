@@ -8505,19 +8505,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rmarinho\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rmarinho\\Desktop\\RICARDO BRENHAS\\FULL STACK DEVELOPER\\PROJETO PRÁTICO\\POSWEBMVC\\21_02_22_3\\POSWEBMVC\\POSWEBMVC\\POSWEBMVC.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Ambiente de Trabalho\\GITHUB\\POS\\ASP.NETCoreWebApp-MVC-\\POSWEBMVC\\POSWEBMVC\\POSWEBMVC.csproj",
       "projectName": "POSWEBMVC",
-      "projectPath": "C:\\Users\\rmarinho\\Desktop\\RICARDO BRENHAS\\FULL STACK DEVELOPER\\PROJETO PRÁTICO\\POSWEBMVC\\21_02_22_3\\POSWEBMVC\\POSWEBMVC\\POSWEBMVC.csproj",
-      "packagesPath": "C:\\Users\\rmarinho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rmarinho\\Desktop\\RICARDO BRENHAS\\FULL STACK DEVELOPER\\PROJETO PRÁTICO\\POSWEBMVC\\21_02_22_3\\POSWEBMVC\\POSWEBMVC\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\OneDrive\\Ambiente de Trabalho\\GITHUB\\POS\\ASP.NETCoreWebApp-MVC-\\POSWEBMVC\\POSWEBMVC\\POSWEBMVC.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\OneDrive\\Ambiente de Trabalho\\GITHUB\\POS\\ASP.NETCoreWebApp-MVC-\\POSWEBMVC\\POSWEBMVC\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\rmarinho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8580,7 +8585,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

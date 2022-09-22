@@ -26,7 +26,7 @@ namespace POSWEBMVC.Migrations
                 {
                     CategoryID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(maxLength: 50, nullable: false)
+                    Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -91,7 +91,7 @@ namespace POSWEBMVC.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CategoryID = table.Column<int>(nullable: false),
                     BrandID = table.Column<int>(nullable: false),
-                    Name = table.Column<string>(maxLength: 100, nullable: false),
+                    Name = table.Column<string>(nullable: true),
                     Image = table.Column<string>(nullable: false),
                     UnitPrice = table.Column<decimal>(type: "decimal(6, 2)", nullable: false),
                     Stock = table.Column<int>(nullable: false),

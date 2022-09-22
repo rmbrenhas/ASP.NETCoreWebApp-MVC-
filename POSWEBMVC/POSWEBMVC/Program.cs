@@ -31,7 +31,7 @@ namespace POSWEBMVC
         //        try
         //        {
         //            var context = services.GetRequiredService<PosContext>();
-        //            DbInitializer.Initialize(context);
+        //            PosDataInitializer.Seed(context);
         //        }
         //        catch (Exception ex)
         //        {

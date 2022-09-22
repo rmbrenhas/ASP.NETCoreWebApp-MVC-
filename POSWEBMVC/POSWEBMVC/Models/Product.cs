@@ -15,8 +15,8 @@ namespace POSWEBMVC.Models
         public int CategoryID { get; set; }
         [Required]
         public int BrandID { get; set; }
-        [Required]
-        [MaxLength(100)]
+        //[Required]
+        //[MaxLength(100)]
         public string Name { get; set; }
         [Required]
         public string Image { get; set; }
