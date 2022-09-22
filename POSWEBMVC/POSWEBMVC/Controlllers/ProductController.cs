@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -24,10 +25,11 @@ namespace POSWEBMVC.Controllers
             _webHostEnvironment = hostEnvironment;
         }
 
+        [Authorize]
         // GET: Product
         public async Task<IActionResult> Index()
         {
-            var posContext = _context.Products.Include(p => p.Brand);
+            var posContext = _context.Products.Include(p => p.Brand).Include(e => e.Category);
             return View(await posContext.ToListAsync());
         }
 
@@ -118,6 +120,8 @@ namespace POSWEBMVC.Controllers
                 return NotFound();
             }
             ViewData["BrandID"] = new SelectList(_context.Brands, "BrandID", "BrandName", product.BrandID);
+            ViewData["CategoryID"] = new SelectList(_context.Categories, "CategoryID", "Name", product.CategoryID);
+
             return View(product);
         }
 

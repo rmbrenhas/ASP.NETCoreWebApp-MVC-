@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -18,7 +19,7 @@ namespace CookieReaders.Controllers
             _logger = logger;
             _context = context;
         }
-
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             var posContext = _context.Products.Include(p => p.Brand);

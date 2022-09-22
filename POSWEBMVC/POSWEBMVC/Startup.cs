@@ -41,10 +41,24 @@ namespace POSWEBMVC
 
             services.AddScoped<IUserRepository, UserRepository>();
 
+            services.AddMvc(options =>
+            {
+                options.EnableEndpointRouting = true;
+            });
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+            services.AddMvc().AddRazorPagesOptions(options =>
+            {
+                options.Conventions.AddAreaPageRoute("Identity", "/Account/Login", "");
+            });
+
+            services.AddControllersWithViews().AddRazorPagesOptions(options => {
+                options.Conventions.AddAreaPageRoute("Identity", "/Account/Login", "");
             });
 
             services.AddAuthentication(options =>
@@ -103,7 +117,7 @@ namespace POSWEBMVC
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Account}/{action=Login}/{id?}");
             });
         }
     }
